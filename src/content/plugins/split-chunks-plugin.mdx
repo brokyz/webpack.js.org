@@ -275,7 +275,7 @@ module.exports = {
           name(module, chunks, cacheGroupKey) {
             const moduleFileName = module
               .identifier()
-              .split('/')
+              .split('\\')
               .reduceRight((item) => item);
             const allChunksNames = chunks.map((item) => item.name).join('~');
             return `${cacheGroupKey}-${allChunksNames}-${moduleFileName}`;
